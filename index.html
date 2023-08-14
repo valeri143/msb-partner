@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="
+    https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
+    " rel="stylesheet">
     <title>MSB PARTNER</title>
     <link
     rel="stylesheet"
@@ -35,27 +38,27 @@
     <main>
         <section >
             <div class="container hero">
-                <!-- <svg class="icon-background" width="500" height="" >
-                  <use href="./images/sprite.svg#icon-background"></use>
-                </svg> -->
-                <h1 class="hero-title">MSB PARTNER</h1>
-                <p class="hero-text">оренда авто для роботи в таксі</p>
-                <p class="hero-text">офіційний партнер</p>
-               <div class="logo-flexbox">
-                <svg>
-                    <use href="./images/sprite.svg#icon-logo-uber"></use>
-                  </svg>
-                  <svg>
-                    <use href="./images/sprite.svg#icon-logo-freenow"></use>
-                  </svg>
-                  <svg>
-                      <use href="./images/sprite.svg#icon-logo-bolt"></use>
-                    </svg>
-               </div>
+                    <svg class="icon-background" width="350" height="" >
+                        <use href="./images/sprite.svg#icon-background"></use>
+                      </svg>
+                      <h1 class="hero-title">MSB PARTNER</h1>
+                      <p class="hero-text">оренда авто для роботи в таксі</p>
+                      <p class="hero-text">офіційний партнер</p>
+                     <div class="logo-flexbox">
+                      <svg>
+                          <use href="./images/sprite.svg#icon-logo-uber"></use>
+                        </svg>
+                        <svg>
+                          <use href="./images/sprite.svg#icon-logo-freenow"></use>
+                        </svg>
+                        <svg>
+                            <use href="./images/sprite.svg#icon-logo-bolt"></use>
+                          </svg>
+                     </div>
                 <div class="hero-button">
                     <a href="#catalog" class="hero-button-link-text">Вибрати авто</a>
                 </div>
-                <img src="./images/bg_car.png" alt="car" width="340" height="211">
+                <img src="./images/bg_car.png" class="hero-car-img" alt="car" width="340" height="211">
             </div>  
         </section>
         <section id="catalog">
@@ -155,7 +158,7 @@
                                     <p class="catalog-car-overlay-text">120-240zl</p></div>
                                     <div class="catalog-car-overlay-line"></div>
                                </div>
-                               <button class="catalog-car-overlay-button"> Орендувати </button>
+                               <button class="catalog-car-overlay-button "> Орендувати </button>
                             </div>
                             <div class="catalog-car-price">
                                 <p class="catalog-car-price-title">455zl/тиждень</p>
@@ -205,7 +208,7 @@
                                     <p class="catalog-car-overlay-text">120-240zl</p></div>
                                     <div class="catalog-car-overlay-line"></div>
                                </div>
-                               <button class="catalog-car-overlay-button"> Орендувати </button>
+                               <button class="catalog-car-overlay-button "> Орендувати </button>
                             </div>
                             <div class="catalog-car-price">
                                 <p class="catalog-car-price-title">455zl/тиждень</p>
@@ -555,7 +558,7 @@
                    </ul>
                    <div class="conditions-partner-box">
                     <p class="conditions-partner-box-title">Стати партнером UBER, FREENOW та BOLT з нами може кожний бажаючий!</p>
-                    <button class="conditions-partner-box-button">Стати партнером</button>
+                    <button class="conditions-partner-box-button js-modal">Стати партнером</button>
                    </div>
             </div>
         </section>
@@ -610,9 +613,9 @@
                 </address>
                 <p>Пн-Пт <span class="contacts-time-accent">09:00-18:00</span></p>
                 <p>Сб-Вс <span class="contacts-time-accent">10:00-15:00</span></p>
-                <h4 class="contacts-form-title">Передзвоніть мені</h4>
+                <form id="contact-form" >
+                    <h4 class="contacts-form-title">Передзвоніть мені</h4>
                 <h5 class="contacts-form-text">Менеджер зв’яжеться з вами протягом години</h5>
-                <form >
                     <input class="contacts-form-input" type="text" name="name"  placeholder="Ваше ім’я">
                     <div class="icon-languages">
                         <div class="js-open-code js-close-code" role="list" aria-expanded="false">
@@ -656,6 +659,9 @@
                     </svg>
                     <p class="contacts-form-aggrement">Я ознайомлений та приймаю <span class="contacts-form-aggrement-accent">правила обробки персональних даних</span></p>
                 </form>
+                <div id="submit-success" class="dispay-hidden form-submit" >
+                    <p class="form-submit-text">Ваші дані відправлені — очікуйте дзвінок менеджера. </p>
+                </div>
             </div>
         </section>
            
@@ -727,7 +733,7 @@
         <p class="footer-text">Пн-Пт <span class="contacts-time-accent">09:00-18:00</span></p>
         <p class="footer-text">Сб-Вс <span class="contacts-time-accent">10:00-15:00</span></p>
         <p class="footer-title" style="font-size: 16px;">Політика конфіденційності</p>
-        <p class="footer-title">© 2023 Всі права захищені. MSB PARTNER. </p>
+        <p class="footer-title" style="margin-bottom: 0;">© 2023 Всі права захищені. MSB PARTNER. </p>
     </div>
     </footer>
 
@@ -816,8 +822,14 @@
     </div>     
     </div>
 
+    <script src="
+    https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
+    "></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/language-switcher.js"></script>
     <script src="./js/switcher.js"></script>
+    <script src="./js/modal-window.js"></script>
+    <script src="./js/modal-switcher-lang.js"></script>
+    <script src="./js/form-submitting.js"></script>
 </body>
 </html>

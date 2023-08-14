@@ -85,11 +85,10 @@ button {
     padding: 70px 15px 0px 15px;
     margin: 0 auto;
     box-sizing: border-box;
-     outline: solid tomato;   
+     /* outline: solid tomato;    */
      background-color: inherit;
      background-color: var(--background-color);
     position: relative;
-    /* z-index: -1; */
 }
 @media screen and (min-width: 360px) {
   .container {
@@ -115,10 +114,9 @@ button {
 }
 .icon-background{
 position: absolute;
-z-index: -1;
-left: -60px;
-top:140px
+left: 8px;
 }
+
 .hero-title{
     font-family: 'Exo 2', sans-serif;
     font-weight: bold;
@@ -138,6 +136,8 @@ top:140px
     justify-content: center;
 }
 .hero-button, .conditions-partner-box-button, .contacts-form-button{
+    position: relative;
+    z-index: 5;
     width: 330px;
     height: 60px;
     font-family: 'Inter', sans-serif; 
@@ -159,6 +159,10 @@ top:140px
     font-family: 'Inter', sans-serif; 
     font-size: 16px;
     font-weight: 600;
+}
+.hero-car-img{
+    position: relative;
+    z-index: 5;
 }
 /* catalog */
 .catalog{
@@ -664,6 +668,7 @@ margin-bottom: 20px;
 .icon-languages{
     position: relative;
 }
+
 .contacts-form-icon-lang{
     position: absolute;
     bottom: 46px;
@@ -693,14 +698,16 @@ position: absolute;
 left: 100px;
 }
 .form-input-number{
-    padding-left: 100px;
+    padding-left: 105px;
 }
 .contacts-form-custom-chekbox{
+    z-index: 999;
     appearance: none;
     position: absolute;
     left: 30px;
     bottom: 6px;
-        border-radius: 5px;
+     border-radius: 5px;
+     opacity: 0.5;
     border: 1px solid var(--accent-color);
     width: 25px;
     height: 25px;
@@ -714,9 +721,25 @@ left: 100px;
     bottom: 6px;
     transition: opacity 250ms var(--animation-cubic);
     }
-    .contacts-form-custom-chekbox:checked + .icon-checked, .contacts-form-custom-chekbox:focus + .icon-checked, .contacts-form-custom-chekbox:active + .icon-checked   {
-        opacity: 1;
-    }
+.contacts-form-custom-chekbox:checked + .icon-checked{
+    opacity: 0.5;
+}
+.form-submit{
+    width: 343px;
+height: 393px;
+padding-top: 168px;
+padding-bottom: 167px;
+text-align: center;
+}
+.form-submit-text{
+    color: #009A4F;
+font-family: "Exo 2";
+font-size: 24px;
+}
+.dispay-hidden{
+    display: none;
+}
+
 /* map */
 .map{
     padding: 0;
@@ -725,6 +748,7 @@ left: 100px;
 .footer{
     text-align: center;
     background-color: var(--primary-color);
+    padding-bottom: 20px;
 }
 .footer-icon-road{
     position: absolute;
@@ -827,7 +851,7 @@ margin-bottom: 10px;
 }
 .hamburger-menu-nav-list{
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .hamburger-menu-nav-link-item:not(:last-child){
     margin-bottom: 30px;
@@ -842,7 +866,7 @@ margin-bottom: 10px;
     bottom: 10px;
 }
 .hamburger-menu-languages{
-    margin-top: 40px;
+    margin-top: 20px;
     position: relative;
 }
 .hamburger-menu-current-link{
@@ -854,6 +878,7 @@ margin-bottom: 10px;
 }
 /* LANGUAGE-SWITCHER */
 .language-switcher{
+    z-index: 8;
     position: absolute;
     bottom: -50px;
     left: 3px;
@@ -879,3 +904,70 @@ transition: opacity 250ms var(--animation-cubic);
     gap: 3px;
     align-items: center;
 }
+/* MODAL WINDOW */
+.basicLightbox{
+    align-items: baseline;
+}
+.modal-window{
+    position: relative;
+    text-align: center;
+    width: 350px;
+height: 458px;
+padding: 30px 15px 30px 15px ;
+border-radius: 20px;
+background: var(--light-color);
+}
+.modal-window-close-cross{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.modal-window-title{
+    font-family: "Exo 2";
+font-size: 30px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+.modal-window-input{
+    background-color: var(--catalog-background);
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-window-checkbox{
+    border-color: #009A4F;
+    left: 20px;
+    bottom: 43px;
+}
+.modal-window-aggrement{
+    margin-left: 40px;
+    opacity: 0.5;
+}
+.modal-window-aggreement-accent{
+    color: #009A4F;
+}
+.modal-window-steps{
+    position: absolute;
+    bottom: -260px;
+    z-index: -1;
+    width: 360px;
+height: 344px;
+border-radius: 0px 0px 20px 20px;
+background: var(--primary-color);
+text-align: center;
+padding-top: 89px;
+}
+.modal-window-steps-list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.modal-window-text{
+    font-size: 10px;
+    color: var(--light-color);
+}
+.modal-window-steps{
+    overflow-y: scroll;
+  }
+  body.modal-open {
+    overflow: hidden;
+  }
