@@ -619,9 +619,9 @@
                     <input class="contacts-form-input" type="text" name="name"  placeholder="Ваше ім’я">
                     <div class="icon-languages">
                         <div class="js-open-code js-close-code" role="list" aria-expanded="false">
-                            <svg class="contacts-form-icon-lang js-current" style="border-radius: 2px;" id="ua" width="29" height="21">
+                             <div class="contacts-form-icon-lang js-current"><svg  class="svg-countries" id="ua" width="29" height="21">
                                 <use href="./images/sprite.svg#icon-ukr_lang"></use>
-                              </svg>
+                              </svg></div>
                               <p class="contacts-form-icon-lang-number js-number-switcher">+380</p>
                               <svg class="contacts-form-icon-arrow_down " width="10" height="5" >
                                 <use href="./images/sprite.svg#icon-arrow_down"></use>
@@ -634,17 +634,17 @@
                         <div class="language-switcher js-languages-container">
                             <ul class="language-switcher-flexbox">
                                 <li>
-                                    <svg id="pl" width="29" height="21">
+                                    <svg class="svg-countries" id="pl" width="29" height="21">
                                       <use href="./images/sprite.svg#icon-poland_lang"></use>
                                     </svg>
                                 </li>
                                 <li>
-                                    <svg id="us" width="29" height="21" style="border-radius: 2px;">
+                                    <svg class="svg-countries" id="us" width="29" height="21" >
                                       <use href="./images/sprite.svg#icon-american_lang"></use>
                                     </svg>
                                 </li>
                                 <li>
-                                    <svg id="ru" width="29" height="21" >
+                                    <svg class="svg-countries" id="ru" width="29" height="21" >
                                       <use href="./images/sprite.svg#icon-rus_lang"></use>
                                     </svg>
                                 </li>
@@ -790,30 +790,31 @@
             </div>
         <div class="hamburger-menu-languages">
             <div class="js-open-lang js-close-lang" role="list" aria-expanded="false">
-                <svg class="hamburger-menu-icon-lang js-current-lang" style="border-radius: 2px;" id="ukr" width="29" height="21">
-                    <use href="./images/sprite.svg#icon-ukr_lang"></use>
-                  </svg>
-                  <svg class="hamburger-menu-arrow arrow_white_down" width="10" height="5" >
-                    <use href="./images/sprite.svg#icon-arrow-white"></use>
-                  </svg>
-                  <svg class="hamburger-menu-arrow arrow_white_up hidden" width="10" height="5" >
-                    <use href="./images/sprite.svg#icon-arrow-white"></use>
-                  </svg>
+
+                    <div class=" js-current-lang"><svg  class="hamburger-menu-icon-lang svg-countries" id="ukr" width="29" height="21">
+                        <use href="./images/sprite.svg#icon-ukr_lang"></use>
+                      </svg></div>
+                      <svg class="hamburger-menu-arrow arrow_white_down" width="10" height="5" >
+                        <use href="./images/sprite.svg#icon-arrow-white"></use>
+                      </svg>
+                      <svg class="hamburger-menu-arrow arrow_white_up hidden" width="10" height="5" >
+                        <use href="./images/sprite.svg#icon-arrow-white"></use>
+                      </svg>
             </div>
             <div class="language-switcher hamburger-menu-language-switcher js-lang-container">
                 <ul class="language-switcher-flexbox">
                     <li>
-                        <svg id="pld" width="29" height="21">
+                        <svg class="svg-countries" id="pld" width="29" height="21">
                           <use href="./images/sprite.svg#icon-poland_lang"></use>
                         </svg>
                     </li>
                     <li>
-                        <svg id="usa" width="29" height="21" style="border-radius: 2px;">
+                        <svg class="svg-countries" id="usa" width="29" height="21" style="border-radius: 2px;">
                           <use href="./images/sprite.svg#icon-american_lang"></use>
                         </svg>
                     </li>
                     <li>
-                        <svg id="rus" width="29" height="21" >
+                        <svg class="svg-countries" id="rus" width="29" height="21" >
                           <use href="./images/sprite.svg#icon-rus_lang"></use>
                         </svg>
                     </li>
@@ -826,9 +827,9 @@
     https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
     "></script>
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/language-switcher.js"></script>
     <script src="./js/switcher.js"></script>
     <script src="./js/modal-window.js"></script>
+    <script src="./js/language-switcher.js"></script>
     <script src="./js/modal-switcher-lang.js"></script>
     <script src="./js/form-submitting.js"></script>
 </body>
