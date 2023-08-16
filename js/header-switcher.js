@@ -1,16 +1,16 @@
 (() => {
-    const switcher = document.querySelector(".js-lang-container");
-    const arrowClose = document.querySelector(".js-close-lang");
-    const arrowOpen = document.querySelector(".js-open-lang");
+    const switcher = document.querySelector(".js-header-lang-container");
+    const arrowClose = document.querySelector(".js-header-close-lang");
+    const arrowOpen = document.querySelector(".js-header-open-lang");
 
-    const arrowUp = document.querySelector(".arrow_white_up");
-    const arrowDown = document.querySelector(".arrow_white_down");
+    const arrowUp = document.querySelector(".header-arrow_up");
+    const arrowDown = document.querySelector(".header-arrow_down");
 
-    const ukranianFlag = document.querySelector("#ukr");
-    const polandFlag = document.querySelector("#pld");
-    const rusFlag = document.querySelector("#rus");
-    const americanFlag = document.querySelector("#usa");
-    const currentCountry = document.querySelector(".js-current-lang");
+    const ukranianFlag = document.querySelector("#u");
+    const polandFlag = document.querySelector("#p");
+    const rusFlag = document.querySelector("#r");
+    const americanFlag = document.querySelector("#a");
+    const currentCountry = document.querySelector(".js-header-current-lang");
 
     const toggleMenu = () => {
         const isMenuOpen =
@@ -43,32 +43,30 @@
 
     const handleFlagClick = (flagId) => {
       const selectedFlag = document.querySelector(`#${flagId}`);
-      const currentFlag = document.querySelector(".js-current-lang svg");
+      const currentFlag = document.querySelector(".js-header-current-lang svg");
       
       const selectedFlagContent = selectedFlag.innerHTML;
       const currentFlagContent = currentFlag.innerHTML;
       
       selectedFlag.innerHTML = currentFlagContent;
       currentFlag.innerHTML = selectedFlagContent;
-      
-      
       toggleMenu();
       };
 
     ukranianFlag.addEventListener('click', () => {
-        handleFlagClick('ukr');
+        handleFlagClick('u');
     });
 
     polandFlag.addEventListener('click', () => {
-        handleFlagClick('pld');
+        handleFlagClick('p');
     });
 
     rusFlag.addEventListener('click', () => {
-        handleFlagClick('rus');
+        handleFlagClick('r');
     });
 
     americanFlag.addEventListener('click', () => {
-        handleFlagClick('usa');
+        handleFlagClick('a');
     });
 
 })();

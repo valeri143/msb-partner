@@ -1,26 +1,30 @@
 const markup = `
+<div class="modal">
 <div class="modal-window">
 <svg width="42" height="42" class="modal-window-close-cross js-modal-close-btn"><use href="./images/sprite.svg#icon-menu-cross"></use></svg>
+<svg class="cross-white js-modal-cross-btn-white" width="22" height="22">
+<use href="./images/sprite.svg#icon-cross-white"></use>
+</svg>
 <p class="modal-window-title">Заповніть форму, щоб орендувати авто</p>
 <form >
 <input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Ваше ім’я">
-<div class="icon-languages">
+<div class="icon-languages form-languages">
     <div class="js-modal-open-code js-modal-close-code" role="list" aria-expanded="false">
-    <div class="js-modal-current contacts-form-icon-lang">
+    <div class="js-modal-current contacts-form-icon-lang modal-window-desk-position">
     <svg class="svg-countries" id="ukrainian" width="29" height="21">
     <use href="./images/sprite.svg#icon-ukr_lang"></use>
   </svg>
     </div>
-          <p class="contacts-form-icon-lang-number js-modal-number-switcher">+380</p>
+          <p class="contacts-form-icon-lang-number js-modal-number-switcher modal-window-desk-position-number">+380</p>
           <svg class="contacts-form-icon-arrow_down modal-icon-arrow_down js-modal-open-code" width="10" height="5" >
             <use href="./images/sprite.svg#icon-arrow_down"></use>
           </svg>
           <svg class="contacts-form-icon-arrow_up  modal-icon-arrow_up hidden" width="10" height="5" >
             <use href="./images/sprite.svg#icon-arrow_up"></use>
           </svg>
-          <div class="contacts-form-icon-line"></div>
+          <div class="contacts-form-icon-line modal-window-desk-position-line"></div>
     </div>
-    <div class="language-switcher js-modal-languages-container">
+    <div class="language-switcher js-modal-languages-container modal-window-desk-position-switcher">
         <ul class="language-switcher-flexbox">
             <li>
                 <svg class="svg-countries" id="poland" width="29" height="21">
@@ -39,9 +43,9 @@ const markup = `
             </li>
         </ul>
     </div>
-    <input class="contacts-form-input form-input-number modal-window-input" type="tel" name="number" >
+    <input class="contacts-form-input form-input-number modal-window-input modal-window-input-number" type="tel" name="number" >
 </div>
-<button class="contacts-form-button">Відправити</button>
+<button class="contacts-form-button form-button">Відправити</button>
 <input type="checkbox" class="contacts-form-custom-chekbox modal-window-checkbox">
 <svg class="icon-checked modal-window-checkbox" width="25" height="25">
   <use href="./images/sprite.svg#icon-checkbox-green"></use>
@@ -70,6 +74,7 @@ const markup = `
 </li>
     </ul>
 </div>
+</div>
 `
 const modal = document.querySelector(".js-modal");
 
@@ -97,6 +102,9 @@ const handleClick = () => {
 
   const modalBtnClose = document.querySelector(".js-modal-close-btn");
   modalBtnClose.addEventListener("click", onCloseBtn);
+  const modalBtnCloseWhite = document.querySelector(".js-modal-cross-btn-white")
+  modalBtnCloseWhite.addEventListener("click", onCloseBtn)
+
 
   function onClose(event) {
     if (event.key === "Escape") {
@@ -115,7 +123,7 @@ modal.addEventListener("click", handleClick);
 
 
 function  initializeModal(){
-  
+
     const switcher = document.querySelector(".js-modal-languages-container")
     const arrowClose = document.querySelector(".js-modal-close-code")
     const arrowOpen = document.querySelector(".js-modal-open-code")
