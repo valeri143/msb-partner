@@ -6,12 +6,6 @@
     const arrowUp = document.querySelector(".arrow_white_up");
     const arrowDown = document.querySelector(".arrow_white_down");
 
-    const ukranianFlag = document.querySelector("#ukr");
-    const polandFlag = document.querySelector("#pld");
-    const rusFlag = document.querySelector("#rus");
-    const americanFlag = document.querySelector("#usa");
-    const currentCountry = document.querySelector(".js-current-lang");
-
     const toggleMenu = () => {
         const isMenuOpen =
             arrowOpen.getAttribute('aria-expanded') === 'true' || false;
@@ -37,38 +31,46 @@
         bodyScrollLock.enableBodyScroll(document.body);
     });
 
-    const updateFlag = (flagId) => {
-        currentCountry.innerHTML = document.querySelector(`#${flagId}`).outerHTML;
-    };
-
+    const switcherContent = {
+        ukr: `
+          <svg class="svg-countries hamburger-menu-icon-lang" id="ukr" width="29" height="21">
+              <use href="./images/sprite.svg#icon-ukr_lang"></use>
+          </svg>
+        `,
+        pld: `
+          <svg class="svg-countries hamburger-menu-icon-lang" id="pld" width="29" height="21">
+              <use href="./images/sprite.svg#icon-poland_lang"></use>
+          </svg>
+        `,
+        rus: `
+          <svg class="svg-countries hamburger-menu-icon-lang" id="rus" width="29" height="21">
+              <use href="./images/sprite.svg#icon-rus_lang"></use>
+          </svg>
+        `,
+        usa: `
+          <svg class="svg-countries hamburger-menu-icon-lang" id="usa" width="29" height="21">
+              <use href="./images/sprite.svg#icon-american_lang"></use>
+          </svg>
+        `
+      };
     const handleFlagClick = (flagId) => {
       const selectedFlag = document.querySelector(`#${flagId}`);
-      const currentFlag = document.querySelector(".js-current-lang svg");
-      
-      const selectedFlagContent = selectedFlag.innerHTML;
+      const currentFlag = document.querySelector(".js-current-lang");
       const currentFlagContent = currentFlag.innerHTML;
       
-      selectedFlag.innerHTML = currentFlagContent;
-      currentFlag.innerHTML = selectedFlagContent;
-      
+      selectedFlag.outerHTML = currentFlagContent;
+      currentFlag.innerHTML = switcherContent[flagId];
       
       toggleMenu();
       };
 
-    ukranianFlag.addEventListener('click', () => {
-        handleFlagClick('ukr');
-    });
-
-    polandFlag.addEventListener('click', () => {
-        handleFlagClick('pld');
-    });
-
-    rusFlag.addEventListener('click', () => {
-        handleFlagClick('rus');
-    });
-
-    americanFlag.addEventListener('click', () => {
-        handleFlagClick('usa');
-    });
+    
+      switcher.addEventListener('click', event => {
+        const flagElement = event.target.closest('.svg-countries');
+        if (flagElement) {
+          const flagId = flagElement.id;
+          handleFlagClick(flagId);
+        }
+      });
 
 })();

@@ -2,7 +2,7 @@
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
-  const body = document.body; // Получаем ссылку на <body>
+  const body = document.body; 
   
   const toggleMenu = () => {
     const isMenuOpen =
@@ -13,12 +13,12 @@
     if (mobileMenu.classList.contains("is-open")) {
       openMenuBtn.classList.add("hidden");
       closeMenuBtn.classList.remove("hidden");
-      body.style.overflow = 'hidden'; // Запрещаем скролл на всем сайте
+      body.style.overflow = 'hidden'; 
       mobileMenu.style.overflow = 'auto'; 
     } else {
       openMenuBtn.classList.remove("hidden");
       closeMenuBtn.classList.add("hidden");
-      body.style.overflow = ''; // Восстанавливаем стандартное поведение скролла
+      body.style.overflow = ''; 
       mobileMenu.style.overflow = ''; 
     }
   };
@@ -31,7 +31,7 @@
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
-    body.style.overflow = ''; // Восстанавливаем стандартное поведение скролла при изменении ориентации
+    body.style.overflow = ''; 
     mobileMenu.style.overflow = ''; 
   });
 })();

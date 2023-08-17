@@ -1347,7 +1347,7 @@ left: 100px;
     @media screen and (min-width :1512px){
         .contacts-form-custom-chekbox, .icon-checked{
             left: 58%;
-            bottom: 115px;
+            bottom: 125px;
         }
     }
 .contacts-form-custom-chekbox:checked + .icon-checked{
@@ -1651,6 +1651,9 @@ margin-bottom: 10px;
 @media screen and (min-width: 768px){
     .hamburger-menu-languages{
         display: none;
+    }
+    .hamburger-menu-icon-lang{
+        margin-left: 10px;
     }
 }
 .hamburger-menu-current-link{

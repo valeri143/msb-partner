@@ -130,13 +130,7 @@ function  initializeModal(){
 
    const arrowUp =document.querySelector(".modal-icon-arrow_up")
    const arrowDown = document.querySelector(".modal-icon-arrow_down")
-
-   const ukranianNumber = document.querySelector("#ukrainian")
-   const polandNumber = document.querySelector("#poland")
-   const rusNumber =  document.querySelector("#russ")
-   const americanNumber =  document.querySelector("#american")
    const numberSwitcher = document.querySelector(".js-modal-number-switcher")
-   const currentCountry = document.querySelector(".js-modal-current")
 
     const toggleMenu = () => {
         const isMenuOpen =
@@ -165,56 +159,56 @@ function  initializeModal(){
         bodyScrollLock.enableBodyScroll(document.body);
       });
 
-      const updateFlagAndNumber = (flagId, countryCode) => {
-        currentCountry.innerHTML = document.querySelector(`#${flagId}`).outerHTML;
-        numberSwitcher.textContent = countryCode;
-    };
+    
+  const switcherContent = {
+    ukrainian: `
+      <svg class="svg-countries" id="ukrainian" width="29" height="21">
+          <use href="./images/sprite.svg#icon-ukr_lang"></use>
+      </svg>
+    `,
+    poland: `
+      <svg class="svg-countries" id="poland" width="29" height="21">
+          <use href="./images/sprite.svg#icon-poland_lang"></use>
+      </svg>
+    `,
+    russ: `
+      <svg class="svg-countries" id="russ" width="29" height="21">
+          <use href="./images/sprite.svg#icon-rus_lang"></use>
+      </svg>
+    `,
+    american: `
+      <svg class="svg-countries" id="american" width="29" height="21">
+          <use href="./images/sprite.svg#icon-american_lang"></use>
+      </svg>
+    `
+  };
 
-   const handleFlagClick = (flagId, countryCode) => {
+  const switcherCode = {
+    ukrainian: "+380",
+    poland: "+48",
+    russ: "+7",
+    american: "+1"
+  };
+
+   const handleFlagClick = (flagId) => {
   const selectedFlag = document.querySelector(`#${flagId}`);
-  const currentFlag = document.querySelector(".js-modal-current svg");
-
-  const selectedFlagContent = selectedFlag.innerHTML;
+  const currentFlag = document.querySelector(".js-modal-current");
   const currentFlagContent = currentFlag.innerHTML;
 
-  // Меняем содержимое флагов
   selectedFlag.innerHTML = currentFlagContent;
-  currentFlag.innerHTML = selectedFlagContent;
 
-  const selectedFlagNumberElement = selectedFlag.querySelector(".contacts-form-icon-lang-number");
-  const currentFlagNumberElement = currentFlag.querySelector(".contacts-form-icon-lang-number");
-
-  if (selectedFlagNumberElement && currentFlagNumberElement) {
-    const selectedFlagNumber = selectedFlagNumberElement.textContent;
-    const currentFlagNumber = currentFlagNumberElement.textContent;
-
-    // Меняем номера
-    selectedFlagNumberElement.textContent = currentFlagNumber;
-    currentFlagNumberElement.textContent = selectedFlagNumber;
-
-    numberSwitcher.textContent = countryCode;
-  }
-
+  selectedFlag.outerHTML = currentFlagContent;
+  currentFlag.innerHTML = switcherContent[flagId];
+  numberSwitcher.textContent = switcherCode[flagId];
   toggleMenu();
 };
 
+switcher.addEventListener('click', event => {
+  const flagElement = event.target.closest('.svg-countries');
+  if (flagElement) {
+    const flagId = flagElement.id;
+    handleFlagClick(flagId);
+  }
+});
     
-    
-    
-    ukranianNumber.addEventListener('click', () => {
-        handleFlagClick('ukrainian', '+380');
-    });
-
-    polandNumber.addEventListener('click', () => {
-        handleFlagClick('poland', '+48');
-    });
-
-    rusNumber.addEventListener('click', () => {
-        handleFlagClick('russ', '+7');
-    });
-
-    americanNumber.addEventListener('click', () => {
-        handleFlagClick('american', '+1');
-    });
-   
-}
+  }

@@ -6,15 +6,9 @@
     const arrowUp = document.querySelector(".header-arrow_up");
     const arrowDown = document.querySelector(".header-arrow_down");
 
-    const ukranianFlag = document.querySelector("#u");
-    const polandFlag = document.querySelector("#p");
-    const rusFlag = document.querySelector("#r");
-    const americanFlag = document.querySelector("#a");
-    const currentCountry = document.querySelector(".js-header-current-lang");
-
     const toggleMenu = () => {
         const isMenuOpen =
-            arrowOpen.getAttribute('aria-expanded') === 'true' || false;
+        arrowOpen.getAttribute('aria-expanded') === 'true' || false;
         arrowOpen.setAttribute('aria-expanded', !isMenuOpen);
         switcher.classList.toggle('is-open');
 
@@ -37,36 +31,47 @@
         bodyScrollLock.enableBodyScroll(document.body);
     });
 
-    const updateFlag = (flagId) => {
-        currentCountry.innerHTML = document.querySelector(`#${flagId}`).outerHTML;
-    };
-
-    const handleFlagClick = (flagId) => {
-      const selectedFlag = document.querySelector(`#${flagId}`);
-      const currentFlag = document.querySelector(".js-header-current-lang svg");
-      
-      const selectedFlagContent = selectedFlag.innerHTML;
-      const currentFlagContent = currentFlag.innerHTML;
-      
-      selectedFlag.innerHTML = currentFlagContent;
-      currentFlag.innerHTML = selectedFlagContent;
-      toggleMenu();
+    const switcherContent = {
+        u: `
+          <svg class="svg-countries" id="u" width="29" height="21">
+              <use href="./images/sprite.svg#icon-ukr_lang"></use>
+          </svg>
+        `,
+        p: `
+          <svg class="svg-countries" id="p" width="29" height="21">
+              <use href="./images/sprite.svg#icon-poland_lang"></use>
+          </svg>
+        `,
+        r: `
+          <svg class="svg-countries" id="r" width="29" height="21">
+              <use href="./images/sprite.svg#icon-rus_lang"></use>
+          </svg>
+        `,
+        a: `
+          <svg class="svg-countries" id="a" width="29" height="21">
+              <use href="./images/sprite.svg#icon-american_lang"></use>
+          </svg>
+        `
       };
 
-    ukranianFlag.addEventListener('click', () => {
-        handleFlagClick('u');
-    });
+    const handleFlagClick = (flagId) => {
+        const selectedFlag = document.querySelector(`#${flagId}`);
+        const currentFlag = document.querySelector(".js-header-current-lang");
+        const currentFlagContent = currentFlag.innerHTML;
 
-    polandFlag.addEventListener('click', () => {
-        handleFlagClick('p');
-    });
+        selectedFlag.outerHTML = currentFlagContent;
+        currentFlag.innerHTML = switcherContent[flagId];
 
-    rusFlag.addEventListener('click', () => {
-        handleFlagClick('r');
-    });
+        toggleMenu();
+    };
 
-    americanFlag.addEventListener('click', () => {
-        handleFlagClick('a');
-    });
+    switcher.addEventListener('click', event => {
+        const flagElement = event.target.closest('.svg-countries');
+        if (flagElement) {
+          const flagId = flagElement.id;
+          handleFlagClick(flagId);
+        }
+      });
 
 })();
+
