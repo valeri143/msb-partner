@@ -24,31 +24,25 @@
     arrowOpen.addEventListener('click', toggleMenu);
     arrowClose.addEventListener('click', toggleMenu);
 
-    window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-        if (!e.matches) return;
-        switcher.classList.remove('is-open');
-        arrowOpen.setAttribute('aria-expanded', false);
-        bodyScrollLock.enableBodyScroll(document.body);
-    });
 
     const switcherContent = {
         ukr: `
-          <svg class="icon-counties hamburger-menu-icon-lang" id="ukr" width="29" height="21">
+          <svg class="svg-counties hamburger-menu-icon-lang" id="ukr" width="29" height="21">
               <use href="./images/sprite.svg#icon-ukr_lang"></use>
           </svg>
         `,
         pld: `
-          <svg class="icon-counties hamburger-menu-icon-lang" id="pld" width="29" height="21">
+          <svg class="svg-counties hamburger-menu-icon-lang" id="pld" width="29" height="21">
               <use href="./images/sprite.svg#icon-poland_lang"></use>
           </svg>
         `,
         rus: `
-          <svg class="icon-counties hamburger-menu-icon-lang" id="rus" width="29" height="21">
+          <svg class="svg-counties hamburger-menu-icon-lang" id="rus" width="29" height="21">
               <use href="./images/sprite.svg#icon-rus_lang"></use>
           </svg>
         `,
         usa: `
-          <svg class="icon-counties hamburger-menu-icon-lang" id="usa" width="29" height="21">
+          <svg class="svg-counties hamburger-menu-icon-lang" id="usa" width="29" height="21">
               <use href="./images/sprite.svg#icon-american_lang"></use>
           </svg>
         `

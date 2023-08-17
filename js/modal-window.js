@@ -151,13 +151,6 @@ function  initializeModal(){
       arrowOpen.addEventListener('click', toggleMenu);
       arrowClose.addEventListener('click', toggleMenu);
   
-  
-      window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-        if (!e.matches) return;
-        switcher.classList.remove('is-open');
-        arrowOpen.setAttribute('aria-expanded', false);
-        bodyScrollLock.enableBodyScroll(document.body);
-      });
 
     
   const switcherContent = {

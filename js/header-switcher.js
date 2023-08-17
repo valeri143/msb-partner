@@ -24,31 +24,24 @@
     arrowOpen.addEventListener('click', toggleMenu);
     arrowClose.addEventListener('click', toggleMenu);
 
-    window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-        if (!e.matches) return;
-        switcher.classList.remove('is-open');
-        arrowOpen.setAttribute('aria-expanded', false);
-        bodyScrollLock.enableBodyScroll(document.body);
-    });
-
     const switcherContent = {
         u: `
-          <svg class="icon-counties" id="u" width="29" height="21">
+          <svg class="svg-counties" id="u" width="29" height="21">
               <use href="./images/sprite.svg#icon-ukr_lang"></use>
           </svg>
         `,
         p: `
-          <svg class="icon-counties" id="p" width="29" height="21">
+          <svg class="svg-counties" id="p" width="29" height="21">
               <use href="./images/sprite.svg#icon-poland_lang"></use>
           </svg>
         `,
         r: `
-          <svg class="icon-counties" id="r" width="29" height="21">
+          <svg class="svg-counties" id="r" width="29" height="21">
               <use href="./images/sprite.svg#icon-rus_lang"></use>
           </svg>
         `,
         a: `
-          <svg class="icon-counties" id="a" width="29" height="21">
+          <svg class="svg-counties" id="a" width="29" height="21">
               <use href="./images/sprite.svg#icon-american_lang"></use>
           </svg>
         `
