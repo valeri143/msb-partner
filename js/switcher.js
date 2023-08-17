@@ -33,22 +33,22 @@
 
     const switcherContent = {
         ukr: `
-          <svg class="svg-countries hamburger-menu-icon-lang" id="ukr" width="29" height="21">
+          <svg class="icon-counties hamburger-menu-icon-lang" id="ukr" width="29" height="21">
               <use href="./images/sprite.svg#icon-ukr_lang"></use>
           </svg>
         `,
         pld: `
-          <svg class="svg-countries hamburger-menu-icon-lang" id="pld" width="29" height="21">
+          <svg class="icon-counties hamburger-menu-icon-lang" id="pld" width="29" height="21">
               <use href="./images/sprite.svg#icon-poland_lang"></use>
           </svg>
         `,
         rus: `
-          <svg class="svg-countries hamburger-menu-icon-lang" id="rus" width="29" height="21">
+          <svg class="icon-counties hamburger-menu-icon-lang" id="rus" width="29" height="21">
               <use href="./images/sprite.svg#icon-rus_lang"></use>
           </svg>
         `,
         usa: `
-          <svg class="svg-countries hamburger-menu-icon-lang" id="usa" width="29" height="21">
+          <svg class="icon-counties hamburger-menu-icon-lang" id="usa" width="29" height="21">
               <use href="./images/sprite.svg#icon-american_lang"></use>
           </svg>
         `
@@ -66,7 +66,7 @@
 
     
       switcher.addEventListener('click', event => {
-        const flagElement = event.target.closest('.svg-countries');
+        const flagElement = event.target.closest('.icon-counties');
         if (flagElement) {
           const flagId = flagElement.id;
           handleFlagClick(flagId);

@@ -34,6 +34,17 @@
     body.style.overflow = ''; 
     mobileMenu.style.overflow = ''; 
   });
+
+  // Close the mobile menu when clicking on a menu link 
+  const menuLinks = mobileMenu.querySelectorAll('.footer-link');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('is-open')) {
+        toggleMenu();
+      }
+    });
+  });
 })();
+
 
 
