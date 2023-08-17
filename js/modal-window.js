@@ -77,6 +77,11 @@ const markup = `
 </div>
 `
 const modal = document.querySelector(".js-modal");
+// const onRent = document.querySelector(".catalog-car-overlay-button")
+const onRentButtons = document.querySelectorAll(".catalog-car-overlay-button");
+
+
+
 
 
 const handleClick = () => {
@@ -120,6 +125,9 @@ const handleClick = () => {
 };
 
 modal.addEventListener("click", handleClick);
+onRentButtons.forEach(button => {
+  button.addEventListener("click", handleClick);
+});
 
 
 function  initializeModal(){
@@ -203,5 +211,4 @@ switcher.addEventListener('click', event => {
     handleFlagClick(flagId);
   }
 });
-    
-  }
+ }

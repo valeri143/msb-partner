@@ -675,6 +675,7 @@ transition: opacity 250ms var(--animation-cubic);
     font-size: 20px;
     opacity: 3;
     transition: opacity 250ms var(--animation-cubic);
+    z-index: 2;
 }
 
 .catalog-car-phonebox-button:hover::after, .catalog-car-phonebox-button:focus::after {
@@ -1770,6 +1771,7 @@ background: var(--light-color);
     position: absolute;
     right: 10px;
     top: 10px;
+    cursor: pointer;
 }
 .cross-white{
     display: none;
@@ -1900,6 +1902,7 @@ overflow-y: scroll;
         top: 19px;
         right: -330px;
         z-index: 120;
+        cursor: pointer;
     }
     .modal-window-close-cross{
         display: none;
