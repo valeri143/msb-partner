@@ -280,12 +280,12 @@ bottom: 85px;
 .hero-text{
     font-size: 18px;
     margin-bottom: 14px;
-     z-index: 5;
-    position: relative;
 }
 @media screen and (min-width: 768px) {
     .hero-text{
         margin-bottom: 29px;
+        z-index: 5;
+        position: relative;
     }
     .hero-partner{
         position: absolute;
@@ -310,6 +310,7 @@ bottom: 85px;
     height: 20px;
     justify-content: center;
 }
+
 .check-animation{
     border-radius: 500px;
     display: none;
@@ -325,6 +326,9 @@ bottom: 85px;
         width: 500px;
         margin-left: 150px;
         margin-top: -63px;
+    }
+    .logo-flexbox-moscov{
+        margin-left: 180px;
     }
     .header-check{
         display: flex;
@@ -817,7 +821,7 @@ transition: box-shadow, background-color, scale 250ms var(--animation-cubic);
 }
 .benefits-list-item-img{
     position: absolute;
-    bottom: 5px;
+    bottom: -2px;
     right: 0;
     transition: scale 500ms var(--animation-cubic);
 }
@@ -848,6 +852,10 @@ transition: box-shadow, background-color, scale 250ms var(--animation-cubic);
 }
 .benefits-list-item:hover .benefits-list-item-img-secondcard, .benefits-list-item:focus .benefits-list-item-img-secondcard{
     scale: 0.9;
+}
+.benefits-list-item:hover .benefits-list-item-img-friends, .benefits-list-item:focus .benefits-list-item-img-friends{
+    scale: 0.9;
+    bottom: -4px;
 }
 @media screen and (min-width: 768px){
     .benefits-list-item:hover .benefits-list-item-img, .benefits-list-item:focus .benefits-list-item-img{
@@ -927,6 +935,8 @@ margin-bottom: -25px;
     font-family: "Exo 2";
     font-size: 24px;
     margin-bottom: 40px;
+    padding-left: 33px;
+    padding-right: 33px;
 }
 @media screen and (min-width :768px){
     .start-steps-list-item-text{
