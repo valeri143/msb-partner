@@ -1318,6 +1318,12 @@ margin-top: 40px;
         background: var(--light-color);
     }
 }
+@media screen and (min-width :1512px){
+    .contacts-form-input{
+        width: 400px;
+        background: var(--catalog-background);
+    }
+}
 .contacts-form-aggrement{
     font-size: 12px;
     opacity: 0.8;
