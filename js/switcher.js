@@ -20,22 +20,22 @@ const switcherContent = {
     </svg>
   `,
   u: `
-  <svg class="svg-counties" id="u" width="29" height="21">
+  <svg class="svg-counties header-svg-countries" id="u" width="29" height="21">
       <use href="./images/sprite.svg#icon-ukr_lang"></use>
   </svg>
 `,
 p: `
-  <svg class="svg-counties" id="p" width="29" height="21">
+  <svg class="svg-counties header-svg-countries" id="p" width="29" height="21">
       <use href="./images/sprite.svg#icon-poland_lang"></use>
   </svg>
 `,
 r: `
-  <svg class="svg-counties" id="r" width="29" height="21">
+  <svg class="svg-counties header-svg-countries" id="r" width="29" height="21">
       <use href="./images/sprite.svg#icon-rus_lang"></use>
   </svg>
 `,
 a: `
-  <svg class="svg-counties" id="a" width="29" height="21">
+  <svg class="svg-counties header-svg-countries" id="a" width="29" height="21">
       <use href="./images/sprite.svg#icon-american_lang"></use>
   </svg>
 `

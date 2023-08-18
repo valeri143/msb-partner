@@ -71,3 +71,36 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// HEADER NAV
+
+const navLinks = document.querySelectorAll('.header-nav-list-flex a');
+const menuNavLinks = document.querySelectorAll('.hamburger-menu-nav-list a');
+
+function navCurrentLink (event, link) {
+
+  event.preventDefault();
+
+  const targetId = link.getAttribute('href');
+
+  document.querySelector(targetId).scrollIntoView({
+      behavior: 'smooth'
+  });
+ 
+  navLinks.forEach(link => {
+      link.classList.remove('hamburger-menu-current-link');
+  });
+  menuNavLinks.forEach(link => {
+    link.classList.remove('hamburger-menu-current-link');
+});
+
+  link.classList.add('hamburger-menu-current-link');
+}
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => navCurrentLink(e, link));
+});
+
+menuNavLinks.forEach(link => {
+  link.addEventListener('click', (e) => navCurrentLink(e, link));
+});
+
