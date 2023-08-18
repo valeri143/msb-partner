@@ -382,15 +382,25 @@ bottom: 85px;
 margin-left: 0;
 margin-right: 0;
 width: 250px;
-
     }
     .hero-car-img{
         position: absolute;
         width: 759px;
         right: 0;
         bottom: -50px;
+        animation: hero-car-img 700ms var(--animation-cubic);
+    }  
+   @keyframes hero-car-img {
+    0% {
+        transform: translateX(100%);
     }
+    100% {
+        transform: translateX(0);
+    }
+
+}
   }
+
 /* catalog */
 .catalog{
     margin-left: auto;
@@ -1295,7 +1305,7 @@ margin-top: 40px;
     padding: 26px 29px 25px 29px;
     border-radius: 500px;
     border-color: transparent;
-    background: var(--light-color);
+    background: var(--catalog-background);
     margin-bottom: 20px;
     transition: border-color 250ms var(--animation-cubic);
 }
