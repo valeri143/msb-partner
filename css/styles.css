@@ -1912,6 +1912,9 @@ margin-bottom: 20px;
     color: #009A4F;
     cursor: pointer;
 }
+.modal-window-aggreement-accent:hover, .modal-window-aggreement-accent:focus{
+    text-decoration: underline;
+}
 @media screen and (min-width :768px){
     .form-languages{
         position: absolute;
