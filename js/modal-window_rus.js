@@ -5,7 +5,7 @@ const markup = `
 <svg class="cross-white js-modal-cross-btn-white" width="22" height="22">
 <use href="./images/sprite.svg#icon-cross-white"></use>
 </svg>
-<p class="modal-window-title" style="width:auto">Заполните форму,чтобы арендовать автомобиль</p>
+<p class="modal-window-title modal-window-title-rus">Заполните форму,чтобы арендовать автомобиль</p>
 <form >
 <input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Ваше имя">
 <div class="icon-languages form-languages">
@@ -50,7 +50,7 @@ const markup = `
 <svg class="icon-checked modal-window-checkbox" width="25" height="25">
   <use href="./images/sprite.svg#icon-checkbox-green"></use>
 </svg>
-<p class="contacts-form-aggrement modal-window-aggrement">Я прочитал и принимаю<span class="contacts-form-aggrement-accent modal-window-aggreement-accent">правила обработки персональных данных</span></p>
+<p class="contacts-form-aggrement modal-window-aggrement">Я прочитал и принимаю<span class="contacts-form-aggrement-accent modal-window-aggreement-accent js-rules-modal-open">правила обработки персональных данных</span></p>
 </form></div>
 <div class="modal-window-steps">
     <ul class="modal-window-steps-list">
@@ -76,6 +76,72 @@ const markup = `
 </div>
 </div>
 `
+
+const rulesMarkup = `
+<div class="rules-modal">
+<svg width="42" height="42" class="rules-modal-window-close-cross js-rules-modal-close-btn"><use href="./images/sprite.svg#icon-menu-cross"></use></svg>
+<h3 class="rules-modal-general-title">Политика конфиденциальности</h3>
+<p class="rules-modal-text">
+Администрация сайта обязуется сохранять вашу конфиденциальность в Интернете. Мы уделяем большое значение охране предоставленных вами данных. Наша политика конфиденциальности основана на требованиях Общего регламента о защите персональных данных Европейского Союза (GDPR). Мы собираем персональные данные в целях: улучшения работы нашего сервиса, осуществления контактов с посетителями данного сайта, обработки данных пользователей для сервиса онлайн-торговли, предоставления информации, которую запрашивал пользователь , а так же для указанных ниже действий.
+</p>
+<h3 class="rules-modal-title">Сбор и использование персональных данных</h3>
+<p class="rules-modal-text">
+Мы собираем и используем ваши персональные данные только в случае вашего добровольного согласия. При согласии с этим вы разрешаете нам собирать и использовать следующие данные: имя и фамилия, электронная почта, номер телефона . Сбор и обработка ваших данных проводится соответствии с законами, действующими на территории Европейского Союза и в Украина.
+</P>
+<h3 class="rules-modal-title">Хранение данных, изменение и удаление</h3>
+<p class="rules-modal-text">
+Пользователь, предоставивший свои персональные данные сайту имеет право на их изменение и удаление, а так же на отзыв своего согласия с их использованием. Ваши персональные данные будут хранится в течении времени, необходимого для использования данных для основной деятельности сайта , при завершении использования ваших данных администрация сайта удаляет их. Для доступа к своим персональным данным вы можете связаться с администрацией сайта по телефону указанному на сайте . Мы можем передавать ваши личные данные третьей стороне только с вашего добровольного согласия, если они были переданы, то изменение данных в других организациях, не связанных с нами, мы осуществить не можем. Использование технических данных при посещении сайта При посещении вами сайта в базе данных сохраняются записи о вашем IP адресе, времени посещения, настройках браузера, операционной системе, а также другая техническая информация необходимая для корректного отображения содержимого сайта. По этим данным нам невозможно идентифицировать личность посетителя. Использование персональных данных другими сервисами На этом сайте используются сторонние интернет-сервисы, осуществляющие независимый от нас сбор информации: Google Analytics . Собранные ими данные могут предоставляться другим службам внутри этих организаций, они могут использовать данные для персонализации рекламы своей собственной рекламной сети. Вы можете прочитать пользовательские соглашения этих организаций на их сайтах. Там же вы можете отказаться от сбора ими персональных данных, к примеру блокировщик Google Analytics . Мы не передаем персональные данные другим организациям и службам, не указанным в данной политике конфиденциальности. Исключение составляет только передача информации при законных требованиях государственных органов уполномоченных осуществлять данные действия.
+</p>
+<h3 class="rules-modal-title">Ссылки на другие сайты</h3>
+<p class="rules-modal-text">
+Наш сайт может содержать ссылки на другие сайты, которые не управляются нами. Мы не несем ответственность за их содержание. Мы рекомендуем вам ознакомиться с политикой конфиденциальности каждого сайта, который вы посещаете, если она там есть.
+</p>
+<h3 class="rules-modal-title">Изменения в политике конфиденциальности</h3>
+<p class="rules-modal-text">
+Наш сайт может обновлять политику конфиденциальности время от времени. Мы сообщаем о любых изменениях, разместив новую политику конфиденциальности на этой странице. Мы отслеживаем изменения законодательства, касающегося персональных данных в Европейском Союзе и в Украине. Если вы оставили персональные данные у нас, то мы оповестим вас об изменении в политике конфиденциальности. Если ваши персональные данные были введены некорректно, то мы не сможем с вами связаться. Обратная связь, заключительные положения Связаться с администрацией сайта по вопросам, связанным с политикой конфиденциальности можно по телефону указанному на сайте.
+</p>
+</div>
+`
+const rulesModalOpenBtn = document.querySelector(".js-rules-open");
+
+const handleRulesSpanClick = () => {
+  const instance = basicLightbox.create(rulesMarkup, {
+    onShow: () => {
+        
+      document.body.style.overflow = "hidden";
+
+      window.addEventListener("keydown", onClose);
+
+      document.body.classList.add("modal-open");
+    },
+    onClose: () => {
+
+      document.body.style.overflow = "auto";
+
+      window.removeEventListener("keydown", onClose);
+
+      document.body.classList.remove("modal-open");
+    },
+  });
+  instance.show();
+
+  const modalBtnClose = document.querySelector(".js-rules-modal-close-btn");
+  modalBtnClose.addEventListener("click", onCloseBtn);
+
+  function onClose(event) {
+    if (event.key === "Escape") {
+      instance.close();
+    }
+  }
+
+  function onCloseBtn() {
+    instance.close();
+  }
+
+};
+
+rulesModalOpenBtn.addEventListener("click", handleRulesSpanClick)
+
 const modal = document.querySelector(".js-modal");
 const onRentButtons = document.querySelectorAll(".catalog-car-overlay-button");
 
@@ -126,6 +192,9 @@ onRentButtons.forEach(button => {
 
 
 function  initializeModal(){
+  
+  const rulesModalOpenButton = document.querySelector(".js-rules-modal-open")
+  rulesModalOpenButton.addEventListener("click", handleRulesSpanClick)
 
     const switcher = document.querySelector(".js-modal-languages-container")
     const arrowClose = document.querySelector(".js-modal-close-code")

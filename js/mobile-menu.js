@@ -58,6 +58,13 @@ contactForm.addEventListener("submit", function(event) {
     submitSuccess.classList.remove("display-hidden");
 });
 
+const cookieBox = document.querySelector(".js-cookie-box")
+ const cookieCloseBtn = document.querySelector(".js-close-cookie-button")
+
+cookieCloseBtn.addEventListener("click", function(){
+  cookieBox.classList.add("cookie-hidden")
+})
+
 window.addEventListener('scroll', function() {
     var header = document.querySelector('.icon-flexbox');
     var headerNav = document.querySelector('.header-nav');

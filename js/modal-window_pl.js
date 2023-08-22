@@ -5,9 +5,9 @@ const markup = `
 <svg class="cross-white js-modal-cross-btn-white" width="22" height="22">
 <use href="./images/sprite.svg#icon-cross-white"></use>
 </svg>
-<p class="modal-window-title">Заповніть форму, щоб орендувати авто</p>
+<p class="modal-window-title modal-window-title-rus">Wypełnij formularz, aby wypożyczyć samochód</p>
 <form >
-<input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Ваше ім’я">
+<input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Twoje imię">
 <div class="icon-languages form-languages">
     <div class="js-modal-open-code js-modal-close-code" role="list" aria-expanded="false">
     <div class="js-modal-current contacts-form-icon-lang modal-window-desk-position">
@@ -45,12 +45,12 @@ const markup = `
     </div>
     <input class="contacts-form-input form-input-number modal-window-input modal-window-input-number" type="tel" name="number" >
 </div>
-<button class="contacts-form-button form-button">Відправити</button>
+<button class="contacts-form-button form-button">Wysłać</button>
 <input type="checkbox" class="contacts-form-custom-chekbox modal-window-checkbox">
 <svg class="icon-checked modal-window-checkbox" width="25" height="25">
   <use href="./images/sprite.svg#icon-checkbox-green"></use>
 </svg>
-<p class="contacts-form-aggrement modal-window-aggrement">Я ознайомлений та приймаю <span class="contacts-form-aggrement-accent modal-window-aggreement-accent js-rules-modal-open">правила обробки персональних даних</span></p>
+<p class="contacts-form-aggrement modal-window-aggrement">I acknowledge that I accept <span class="contacts-form-aggrement-accent modal-window-aggreement-accent js-rules-modal-open"">personal data processing rules</span></p>
 </form></div>
 <div class="modal-window-steps">
     <ul class="modal-window-steps-list">
@@ -58,46 +58,47 @@ const markup = `
             <svg  width="30" height="30">
               <use href="./images/sprite.svg#icon-contact-data"></use>
             </svg>
-            <p class="modal-window-text">Заповніть і відправте форму <br> з контактними даними.</p>
+            <p class="modal-window-text">Wypełnij i wyślij formularz z danymi kontaktowymi.</p>
         </li>
         <li>
         <svg  width="30" height="30">
           <use href="./images/sprite.svg#icon-call"></use>
         </svg>
-        <p class="modal-window-text">Очікуйте дзвінка від нашого менеджера, <br> який підтвердить бронь на авто. <br> (В середньому до 1 години)</p>
+        <p class="modal-window-text"> Poczekaj na telefon od naszego menadżera,kto potwierdzi rezerwację samochodu. <br>(Średnio do 1 godziny)</p>
     </li>
     <li>
     <svg  width="30" height="30">
       <use href="./images/sprite.svg#icon-doc"></use>
     </svg>
-    <p class="modal-window-text">Приїжджайте в парк, підписуйте <br> договір та беріть машину</p>
+    <p class="modal-window-text">Przyjdź do parku, podpisz umowę i odbierz samochód</p>
 </li>
     </ul>
 </div>
 </div>
 `
+
 const rulesMarkup = `
 <div class="rules-modal">
 <svg width="42" height="42" class="rules-modal-window-close-cross js-rules-modal-close-btn"><use href="./images/sprite.svg#icon-menu-cross"></use></svg>
-<h3 class="rules-modal-general-title">Політика конфіденційності</h3>
+<h3 class="rules-modal-general-title">Polityka prywatności</h3>
 <p class="rules-modal-text">
-Адміністрація сайту зобов’язується зберігати вашу конфіденційність в Інтернеті. Ми приділяємо велике значення охороні наданих вами даних. Наша політика конфіденційності заснована на вимогах Загального регламенту про захист персональних даних Європейського Союзу (GDPR). Ми збираємо персональні дані в цілях: поліпшення роботи нашого сервісу, здійснення контактів з відвідувачами даного сайту, обробки даних користувачів для сервісу онлайн-торгівлі, надання інформації, яку запитував користувач, а так само для таких дій.
+Administracja strony zobowiązuje się do zachowania Twojej prywatności w Internecie. Przywiązujemy dużą wagę do ochrony podanych przez Ciebie danych. Nasza polityka prywatności opiera się na wymaganiach Ogólnego Rozporządzenia Unii Europejskiej o Ochronie Danych (RODO). Gromadzimy dane osobowe w celu: ulepszania naszych usług, komunikowania się z osobami odwiedzającymi tę witrynę, przetwarzania danych użytkownika w ramach usługi handlu online, dostarczania informacji żądanych przez użytkownika, a także wykonywania następujących działań.
 </p>
-<h3 class="rules-modal-title">Збір та використання персональних даних </h3>
+<h3 class="rules-modal-title">Gromadzenie i wykorzystywanie danych osobowych </h3>
 <p class="rules-modal-text">
-Ми збираємо і використовуємо ваші персональні дані тільки в разі вашого добровільної згоди. При згоді з цим ви дозволяєте нам збирати і використовувати такі дані: ім’я та прізвище, електронна пошта, номер телефону. Збір та обробка ваших даних проводиться відповідно до законів, що діють на території Європейського Союзу та в Україні.
+Zbieramy i wykorzystujemy Twoje dane osobowe wyłącznie za Twoją dobrowolną zgodą. Jeżeli wyrażasz na to zgodę, upoważniasz nas do gromadzenia i wykorzystywania następujących danych: imię i nazwisko, e-mail, numer telefonu. Zbieranie i przetwarzanie Twoich danych odbywa się zgodnie z prawem obowiązującym na terytorium Unii Europejskiej i na Ukrainie.
 </P>
-<h3 class="rules-modal-title">Зберігання даних, зміна і видалення</h3>
+<h3 class="rules-modal-title">Przechowywanie, modyfikacja i usuwanie danych</h3>
 <p class="rules-modal-text">
-Користувач, який надав свої персональні дані сайту має право на їх зміну і видалення, а так само на відгук своєї згоди з їх використанням. Ваші персональні дані будуть зберігатися протягом часу, необхідного для використання даних для основної діяльності сайту, при завершенні використання ваших даних адміністрація сайту видаляє їх. Для доступу до своїх персональних даних ви можете зв’язатися з адміністрацією сайту за телефоном, вказаним на сайті. Ми можемо передавати ваші особисті дані третім сторонам тільки з вашого добровільної згоди, якщо вони були передані, то зміна даних у інших організаціях, які пов’язані з нами, ми здійснити можемо. Використання технічних даних при відвідуванні сайту При відвідуванні вами сайту в базі даних зберігаються записи про вашу IP адресу, часу відвідування, настройках браузера, операційної системи, а також інша технічна інформація необхідна для коректного відображення вмісту сайту. За цими даними нам неможливо ідентифікувати особу відвідувача. Використання персональних даних іншими сервісами На цьому сайті використовуються сторонні інтернет-сервіси, які здійснюють незалежний від нас збір інформації: Google Analytics. Зібрані ними дані можуть надаватися іншим службам всередині цих організацій, вони можуть використовувати дані для персоналізації реклами своєї власної рекламної мережі. Ви можете прочитати призначені для користувача угоди цих організацій на їх сайтах. Там же ви можете відмовитися від збору ними персональних даних, наприклад блокувальник Google Analytics. Ми не передаємо персональні дані іншим організаціям і службам, не зазначених в цій політиці конфіденційності. Виняток становить тільки передача інформації при законних вимогах державних органів уповноважених здійснювати дані дії.
+Użytkownik, który udostępnił w serwisie swoje dane osobowe ma prawo do ich zmiany oraz usunięcia, a także cofnięcia zgody na ich wykorzystanie. Twoje dane osobowe będą przechowywane przez czas niezbędny do wykorzystania danych do głównej działalności serwisu, po zakończeniu korzystania z danych administracja serwisu usuwa je. Aby uzyskać dostęp do swoich danych osobowych, możesz skontaktować się z administracją serwisu pod wskazanym na stronie numerem telefonu. Twoje dane osobowe możemy przekazać podmiotowi trzeciemu tylko za Twoją dobrowolną zgodą, jeżeli zostały przekazane, to nie możemy zmienić danych w innych organizacjach, które nie są z nami powiązane. Wykorzystywanie danych technicznych podczas wizyty na stronie Podczas wizyty na stronie w bazie danych zapisywane są zapisy dotyczące Twojego adresu IP, czasu wizyty, ustawień przeglądarki, systemu operacyjnego, a także inne informacje techniczne niezbędne do prawidłowego wyświetlania zawartości strony . Na podstawie tych danych nie możemy zidentyfikować tożsamości odwiedzającego. Wykorzystywanie danych osobowych przez inne usługi Ta strona korzysta z zewnętrznych usług internetowych, które zbierają informacje niezależne od nas: Google Analytics. Gromadzone przez nich dane mogą być udostępniane innym usługom w ramach tych organizacji i mogą one wykorzystywać te dane do personalizowania reklam z własnej sieci reklamowej. Możesz przeczytać umowy użytkownika tych organizacji na ich stronach internetowych. Tam możesz również zrezygnować z gromadzenia danych osobowych, na przykład blokera Google Analytics. Nie udostępniamy danych osobowych innym organizacjom i usługom niewymienionym w niniejszej polityce prywatności. Jedynym wyjątkiem jest przekazywanie informacji zgodnie z wymogami prawnymi organów państwowych upoważnionych do wykonywania tych czynności.
 </p>
-<h3 class="rules-modal-title">Посилання на інші сайти</h3>
+<h3 class="rules-modal-title">Linki do innych stron</h3>
 <p class="rules-modal-text">
-Наш сайт може містити посилання на інші сайти, які не справляються нами. Ми не несемо відповідальність за їх зміст. Ми рекомендуємо вам ознайомитися з політикою конфіденційності кожного сайту, який ви відвідуєте, якщо вона там є.
+Nasza witryna może zawierać łącza do innych witryn, które nie są przez nas obsługiwane. Nie ponosimy odpowiedzialności za ich treść. Zachęcamy do zapoznania się z polityką prywatności każdej odwiedzanej witryny, jeśli jest dostępna.
 </p>
-<h3 class="rules-modal-title">Зміни в політиці конфіденційності</h3>
+<h3 class="rules-modal-title">Zmiany w polityce prywatności</h3>
 <p class="rules-modal-text">
-Наш сайт може оновлювати політику конфіденційності час від часу. Ми повідомляємо про будь-які зміни, розмістивши нову політику конфіденційності на цій сторінці. Ми відстежуємо зміни законодавства, що стосується персональних даних в Європейському Союзі і в Україні. Якщо ви залишили персональні дані у нас, то ми повідомимо вас про зміну в політиці конфіденційності. Якщо ваші персональні дані були введені некоректно, то ми не зможемо з вами зв’язатися. Зворотній зв’язок, прикінцеві положення Зв’язатися з адміністрацією сайту з питань, пов’язаних з політикою конфіденційності можна за телефоном, вказаним на сайті.
+Nasza strona może od czasu do czasu aktualizować niniejszą politykę prywatności. Powiadomimy Cię o wszelkich zmianach, publikując nową politykę prywatności na tej stronie. Monitorujemy zmiany w ustawodawstwie dotyczącym danych osobowych w Unii Europejskiej i na Ukrainie. Jeśli zostawiłeś nam dane osobowe, poinformujemy Cię o zmianie w polityce prywatności. Jeśli Twoje dane osobowe zostały wprowadzone nieprawidłowo, nie będziemy mogli się z Tobą skontaktować. Informacje zwrotne, postanowienia końcowe Z administracją serwisu można kontaktować się w sprawach związanych z polityką prywatności dzwoniąc pod numer wskazany w serwisie.
 </p>
 </div>
 `
@@ -140,7 +141,6 @@ const handleRulesSpanClick = () => {
 };
 
 rulesModalOpenBtn.addEventListener("click", handleRulesSpanClick)
-
 
 const modal = document.querySelector(".js-modal");
 const onRentButtons = document.querySelectorAll(".catalog-car-overlay-button");
