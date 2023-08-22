@@ -50,7 +50,7 @@ const markup = `
 <svg class="icon-checked modal-window-checkbox" width="25" height="25">
   <use href="./images/sprite.svg#icon-checkbox-green"></use>
 </svg>
-<p class="contacts-form-aggrement modal-window-aggrement">Я прочитал и принимаю<span class="contacts-form-aggrement-accent modal-window-aggreement-accent js-rules-modal-open">правила обработки персональных данных</span></p>
+<p class="contacts-form-aggrement modal-window-aggrement">Я прочитал и принимаю <span class="contacts-form-aggrement-accent modal-window-aggreement-accent js-rules-modal-open">правила обработки персональных данных</span></p>
 </form></div>
 <div class="modal-window-steps">
     <ul class="modal-window-steps-list">
