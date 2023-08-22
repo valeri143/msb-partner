@@ -489,9 +489,15 @@ top: -95px;
 left: 20px;
 z-index: 5;
 }
+.catalog-car-img-priusII{
+    top: -180px;
+}
 @media screen and (min-width: 768px) {
     .catalog-car-img{
       top: 20px;
+    }
+    .catalog-car-img-priusII{
+        top: -55px;
     }
     .catalog-flexbox{
         display: flex;
@@ -502,6 +508,8 @@ z-index: 5;
       left: 50px;
     }
   }
+
+
 .catalog-car-title{
     font-family: "Exo 2";
 font-size: 20px;
