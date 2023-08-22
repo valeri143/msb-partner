@@ -489,6 +489,9 @@ top: -95px;
 left: 20px;
 z-index: 5;
 }
+.catalog-car-img-honda{
+    top: -105px;
+}
 .catalog-car-img-prius{
     top: -180px;
 }
@@ -498,6 +501,9 @@ z-index: 5;
     }
     .catalog-car-img-prius{
         top: -55px;
+    }
+    .catalog-car-img-honda{
+        top: 10px;
     }
     .catalog-flexbox{
         display: flex;
