@@ -489,14 +489,14 @@ top: -95px;
 left: 20px;
 z-index: 5;
 }
-.catalog-car-img-priusII{
+.catalog-car-img-prius{
     top: -180px;
 }
 @media screen and (min-width: 768px) {
     .catalog-car-img{
       top: 20px;
     }
-    .catalog-car-img-priusII{
+    .catalog-car-img-prius{
         top: -55px;
     }
     .catalog-flexbox{
