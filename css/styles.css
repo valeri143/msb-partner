@@ -379,6 +379,16 @@ bottom: 85px;
     position: relative;
     z-index: 5;
     bottom: 30px;
+    animation: hero-car-img 700ms var(--animation-cubic);
+}
+@keyframes hero-car-img {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
 }
 @media screen and (min-width: 768px){
     .hero-car-img{
@@ -396,17 +406,7 @@ width: 250px;
         position: absolute;
         right: 0;
         bottom: 0;
-        animation: hero-car-img 700ms var(--animation-cubic);
     }  
-   @keyframes hero-car-img {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-
-}
   }
 
 /* catalog */
