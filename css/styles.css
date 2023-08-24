@@ -1358,6 +1358,7 @@ margin-top: 40px;
 }
 .contacts-form-aggrement-accent{
     color: var(--accent-color);
+    cursor: pointer;
 }
 .icon-languages{
     position: relative;
