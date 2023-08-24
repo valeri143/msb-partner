@@ -7,15 +7,18 @@ const markup = `
 </svg>
 <p class="modal-window-title modal-window-title-rus">Wypełnij formularz, aby wypożyczyć samochód</p>
 <form >
-<input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Twoje imię">
+<input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Twoje imię"
+pattern="^[a-zA-Zа-яА-Я\s'-]*$" 
+required
+>
 <div class="icon-languages form-languages">
     <div class="js-modal-open-code js-modal-close-code" role="list" aria-expanded="false">
     <div class="js-modal-current contacts-form-icon-lang modal-window-desk-position">
-    <svg class="svg-countries" id="ukrainian" width="29" height="21">
-    <use href="./images/sprite.svg#icon-ukr_lang"></use>
+    <svg class="svg-countries" id="poland" width="29" height="21">
+    <use href="./images/sprite.svg#icon-poland_lang"></use>
   </svg>
     </div>
-          <p class="contacts-form-icon-lang-number js-modal-number-switcher modal-window-desk-position-number">+380</p>
+          <p class="contacts-form-icon-lang-number js-modal-number-switcher modal-window-desk-position-number">+48</p>
           <svg class="contacts-form-icon-arrow_down modal-icon-arrow_down js-modal-open-code" width="10" height="5" >
             <use href="./images/sprite.svg#icon-arrow_down"></use>
           </svg>
@@ -27,8 +30,8 @@ const markup = `
     <div class="language-switcher js-modal-languages-container modal-window-desk-position-switcher">
         <ul class="language-switcher-flexbox">
             <li>
-                <svg class="svg-countries" id="poland" width="29" height="21">
-                  <use href="./images/sprite.svg#icon-poland_lang"></use>
+                <svg class="svg-countries" id="ukrainian" width="29" height="21">
+                  <use href="./images/sprite.svg#icon-ukr_lang"></use>
                 </svg>
             </li>
             <li>
@@ -43,10 +46,14 @@ const markup = `
             </li>
         </ul>
     </div>
-    <input class="contacts-form-input form-input-number modal-window-input modal-window-input-number" type="tel" name="number" >
+    <input class="contacts-form-input form-input-number modal-window-input modal-window-input-number" type="tel" name="number" 
+    pattern="\d{9,15}"
+    title="Phone number must be digits"
+    required
+    >
 </div>
 <button class="contacts-form-button form-button">Wysłać</button>
-<input type="checkbox" class="contacts-form-custom-chekbox modal-window-checkbox">
+<input type="checkbox" class="contacts-form-custom-chekbox modal-window-checkbox" required>
 <svg class="icon-checked modal-window-checkbox" width="25" height="25">
   <use href="./images/sprite.svg#icon-checkbox-green"></use>
 </svg>

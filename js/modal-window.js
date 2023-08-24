@@ -7,7 +7,10 @@ const markup = `
 </svg>
 <p class="modal-window-title">Заповніть форму, щоб орендувати авто</p>
 <form >
-<input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Ваше ім’я">
+<input class="contacts-form-input modal-window-input" type="text" name="name"  placeholder="Ваше ім’я"
+pattern="^[a-zA-Zа-яА-Я\s'-]*$" 
+required
+>
 <div class="icon-languages form-languages">
     <div class="js-modal-open-code js-modal-close-code" role="list" aria-expanded="false">
     <div class="js-modal-current contacts-form-icon-lang modal-window-desk-position">
@@ -43,10 +46,14 @@ const markup = `
             </li>
         </ul>
     </div>
-    <input class="contacts-form-input form-input-number modal-window-input modal-window-input-number" type="tel" name="number" >
+    <input class="contacts-form-input form-input-number modal-window-input modal-window-input-number" type="tel" name="number" 
+    pattern="\d{9,15}"
+    title="Phone number must be digits"
+    required
+    >
 </div>
 <button class="contacts-form-button form-button">Відправити</button>
-<input type="checkbox" class="contacts-form-custom-chekbox modal-window-checkbox">
+<input type="checkbox" class="contacts-form-custom-chekbox modal-window-checkbox" required>
 <svg class="icon-checked modal-window-checkbox" width="25" height="25">
   <use href="./images/sprite.svg#icon-checkbox-green"></use>
 </svg>

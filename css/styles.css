@@ -366,7 +366,7 @@ bottom: 85px;
     display: flex;
     justify-content: center;
 }
-.hero-button:hover, .hero-button:focus, .conditions-partner-box-button:hover, .conditions-partner-box-button:focus, .contacts-form-button:hover, .contacts-form-button:focus, .cookie-button:hover, .cookie-button:focus{
+.hero-button:hover, .hero-button:active, .hero-button:focus, .conditions-partner-box-button:hover, .conditions-partner-box-button:active, .conditions-partner-box-button:focus, .contacts-form-button:hover, .contacts-form-button:active, .contacts-form-button:focus, .cookie-button:hover, .cookie-button:active, .cookie-button:focus{
     background-color: #FCC01C;
     box-shadow: none;
 }
@@ -617,16 +617,16 @@ margin-bottom: 13px;
     box-shadow: 0px 15px 20px -10px var(--accent-color);
 }
 
-.catalog-car-item:hover .catalog-car-overlay, .catalog-car-item:focus .catalog-car-overlay{
+.catalog-car-item:hover .catalog-car-overlay, .catalog-car-item:focus .catalog-car-overlay, .catalog-car-item:active .catalog-car-overlay{
     transform: translateY(0);
 }
-.catalog-car-item:hover .catalog-car-price-title, .catalog-car-item:focus .catalog-car-price-title{
+.catalog-car-item:hover .catalog-car-price-title, .catalog-car-item:focus .catalog-car-price-title, .catalog-car-item:active .catalog-car-price-title{
     opacity: 0;
  }
-.catalog-car:hover .catalog-car-overlay, .catalog-car:focus .catalog-car-overlay{
+.catalog-car:hover .catalog-car-overlay, .catalog-car:focus .catalog-car-overlay, .catalog-car:active .catalog-car-overlay{
     transform: translateY(0);
 }
-.catalog-car:hover .catalog-car-price-title, .catalog-car:focus .catalog-car-price-title{
+.catalog-car:hover .catalog-car-price-title, .catalog-car:focus .catalog-car-price-title, .catalog-car:active .catalog-car-price-title{
    opacity: 0;
 }
 
@@ -719,11 +719,11 @@ transition: opacity 250ms var(--animation-cubic);
     z-index: 2;
 }
 
-.catalog-car-phonebox-button:hover::after, .catalog-car-phonebox-button:focus::after {
+.catalog-car-phonebox-button:hover::after, .catalog-car-phonebox-button:focus::after, .catalog-car-phonebox-button:active::after {
    opacity: 3;
    color: var(--primary-color);
 }
-.catalog-car-phonebox-button:hover .catalog-car-phonebox-number, .catalog-car-phonebox-button:focus .catalog-car-phonebox-number {
+.catalog-car-phonebox-button:hover .catalog-car-phonebox-number, .catalog-car-phonebox-button:focus .catalog-car-phonebox-number, .catalog-car-phonebox-button:active .catalog-car-phonebox-number{
     opacity: 0;
  }
  .header-button{
@@ -1377,11 +1377,13 @@ margin-top: 40px;
     position: absolute;
     top: 31px;
     left: 85px;
+    cursor: pointer;
 }
 .contacts-form-icon-arrow_up{
     position: absolute;
     top: 31px;
     left: 85px;
+    cursor: pointer;
     transform: rotate(180deg);
 }
 .contacts-form-icon-line{
@@ -1709,6 +1711,7 @@ margin-bottom: 10px;
     position: absolute;
     right: 39%;
     top: 10%;
+    cursor: pointer;
 }
 @media screen and (min-width: 388px){
     .hamburger-menu-arrow{
@@ -1752,6 +1755,7 @@ margin-bottom: 10px;
 }
 .svg-countries, .icon-countries{
     border-radius: 2px;
+    cursor: pointer;
 }
 .header-svg-countries{
     box-shadow: 0px 0px 4px 0px black;
