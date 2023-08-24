@@ -1360,6 +1360,9 @@ margin-top: 40px;
     color: var(--accent-color);
     cursor: pointer;
 }
+.contacts-form-aggrement-accent:hover, .contacts-form-aggrement-accent:focus{
+   text-decoration:underline;
+}
 .icon-languages{
     position: relative;
 }
